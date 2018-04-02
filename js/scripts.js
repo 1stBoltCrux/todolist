@@ -18,5 +18,12 @@ $(document).ready(function() {
     var inputImportance = $("#importance").val();
     var task = new Task(inputTask, inputDate, inputImportance);
     console.log(task);
+    $("#output").append("<li class='hooray'>" + "Task: " + task.task + "</li>",
+    "<li class='hooray'>" + "Date to accomplish: " + task.date + "</li>",
+    "<li class='hooray'>" + "Importance level: " + task.importance + "</li>");
+
+    $(".hooray").click(function() {
+      $(this).remove();
+    });
   });
 });
